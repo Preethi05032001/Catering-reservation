@@ -1,0 +1,163 @@
+/* Custom CSS for Cart component */
+
+.cart-container {
+    padding: 2rem;
+  }
+  
+  .cart-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #e0e0e0 /* Use theme variable */
+  }
+  
+  .cart-items-list {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .noCart-items {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #e0e0e0 ;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color); /* Use theme variable */
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--card-bg-color); /* Use theme variable */
+    color: var(--text-color); /* Use theme variable */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+  }
+  
+  .cart-item-details {
+    flex-grow: 1;
+  }
+  
+  .cart-item-name {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color); /* Highlight item name */
+  }
+  
+  .cart-item-price {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .cart-item-quantity {
+      font-size: 0.9rem;
+      margin: 0;
+      color: var(--text-color);
+  }
+  
+  .remove-from-cart-button {
+    background-color: #dc3545; /* Red color for remove */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-from-cart-button:hover {
+    background-color: #c82333;
+  }
+  
+  .cart-summary {
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color); /* Use theme variable */
+  }
+  
+  .cart-total {
+    margin-bottom: 1rem;
+  }
+  
+  .place-order-button {
+    background-color: var(--primary-color); /* Use theme variable */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-left: 1rem; /* Add margin for spacing */
+    transition: background-color 0.3s ease;
+  }
+  
+  .place-order-button:hover {
+    opacity: 0.9;
+  }
+  
+  .clear-cart-button {
+      background-color: var(--secondary-color); /* Use secondary color */
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-left: 1rem; /* Add margin for spacing */
+      transition: background-color 0.3s ease;
+  }
+  
+  .clear-cart-button:hover {
+      opacity: 0.9;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+      .cart-container {
+          padding: 1rem;
+      }
+  
+      .cart-item {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+  
+      .cart-item-image {
+          margin-right: 0;
+          margin-bottom: 0.5rem;
+      }
+  
+      .cart-item-details {
+          width: 100%;
+          margin-bottom: 0.5rem;
+      }
+  
+      .remove-from-cart-button {
+          width: 100%;
+          text-align: center;
+      }
+  
+      .cart-summary {
+          text-align: center;
+      }
+  
+      .place-order-button,
+      .clear-cart-button {
+          display: block;
+          width: 100%;
+          margin-left: 0;
+          margin-top: 0.5rem;
+      }
+  }
+  

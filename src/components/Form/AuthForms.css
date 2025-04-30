@@ -1,0 +1,103 @@
+/* Custom CSS for Authentication Forms (Register and Login) */
+
+.auth-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg-color); /* Use theme variable */
+    color: var(--text-color); /* Use theme variable */
+  }
+  
+  .auth-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-color); /* Use theme variable */
+  }
+  
+  .auth-form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .auth-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color); /* Use theme variable */
+  }
+  
+  .auth-form input[type="text"],
+  .auth-form input[type="password"],
+  .auth-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color); /* Use theme variable */
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: var(--background-color); /* Input background */
+    color: var(--text-color); /* Input text color */
+  }
+  
+  .auth-form input[type="text"]:focus,
+  .auth-form input[type="password"]:focus,
+  .auth-form select:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Highlight on focus */
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25); /* Add a subtle shadow (requires converting hex to rgb) */
+  }
+  
+  /* Placeholder color for inputs */
+  .auth-form input::placeholder {
+      color: var(--text-color); /* Use theme variable for placeholder */
+      opacity: 0.7;
+  }
+  
+  .auth-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color); /* Use theme variable */
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-button:hover {
+    opacity: 0.9; /* Simple hover effect */
+  }
+  
+  /* Add a subtle hover effect for select */
+  .auth-form select:hover {
+      border-color: var(--primary-color);
+  }
+  
+  /* Basic responsive adjustments */
+  @media (max-width: 600px) {
+      .auth-container {
+          margin: 1rem;
+          padding: 1.5rem;
+      }
+  }
+  
+  /* Helper for primary color RGB for box-shadow */
+  /* You would typically calculate this in JS or use a preprocessor */
+  /* For simplicity here, you might hardcode common RGB values or omit the shadow */
+  /* Example for a blue primary color (#007bff): 0, 123, 255 */
+  /* Example for a purple primary color (#bb86fc): 187, 134, 252 */
+  /* Let's define a CSS variable for RGB if possible, or just use a solid color shadow */
+  /* Using a solid color shadow for simplicity */
+  .auth-form input[type="text"]:focus,
+  .auth-form input[type="password"]:focus,
+  .auth-form select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb, 0, 123, 255), 0.25); /* Fallback RGB */
+  }
+  
+  /* Define RGB variables in index.css if needed */
+  /* Example in index.css: */
+  /* :root { --primary-color-rgb: 0, 123, 255; } */
+  /* body.dark-mode { --primary-color-rgb: 187, 134, 252; } */
+  
+  

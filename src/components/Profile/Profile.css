@@ -1,0 +1,50 @@
+/* Custom CSS for Profile component */
+
+.profile-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg-color); /* Use theme variable */
+    color: var(--text-color); /* Use theme variable */
+  }
+  
+  .profile-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-color); /* Use theme variable */
+  }
+  
+  .profile-details {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .profile-details p {
+    margin-bottom: 0.8rem;
+  }
+  
+  .profile-details strong {
+    color: var(--primary-color); /* Highlight labels */
+  }
+  
+  /* Add styling for edit button if you add one */
+  /* .edit-profile-button {
+      display: block;
+      width: 100%;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  .edit-profile-button:hover {
+      opacity: 0.9;
+  } */
+  

@@ -1,0 +1,19 @@
+/* Custom CSS for Home component */
+
+.home-container {
+    text-align: center;
+    padding: 2rem;
+    margin: 10rem;
+  }
+  
+  .home-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0 /* Use theme variable */
+  }
+  
+  .home-description {
+    font-size: 1.2rem;
+    color: #e0e0e0 /* Use theme variable */
+  }
+  

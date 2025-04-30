@@ -1,0 +1,86 @@
+/* Custom CSS for General Forms (e.g., UploadProduct) */
+
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg-color); /* Use theme variable */
+    color: var(--text-color); /* Use theme variable */
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-color); /* Use theme variable */
+  }
+  
+  .app-form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .app-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color); /* Use theme variable */
+  }
+  
+  .app-form input[type="text"],
+  .app-form input[type="number"],
+  .app-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color); /* Use theme variable */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: var(--background-color); /* Input background */
+    color: var(--text-color); /* Input text color */
+  }
+  
+  .app-form input[type="text"]:focus,
+  .app-form input[type="number"]:focus,
+  .app-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Highlight on focus */
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb, 0, 123, 255), 0.25); /* Use RGB variable or fallback */
+  }
+  
+  /* Placeholder color for inputs/textarea */
+  .app-form input::placeholder,
+  .app-form textarea::placeholder {
+      color: var(--text-color); /* Use theme variable for placeholder */
+      opacity: 0.7;
+  }
+  
+  
+  .app-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Minimum height for textarea */
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color); /* Use theme variable */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Basic responsive adjustments */
+  @media (max-width: 600px) {
+      .form-container {
+          margin: 1rem;
+          padding: 1.5rem;
+      }
+  }
+  
