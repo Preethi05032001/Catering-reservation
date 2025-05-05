@@ -84,9 +84,10 @@ export const removeCurrentUser = () => localStorage.removeItem(STORAGE_KEYS.CURR
 
 // --- Function to populate default data if localStorage is empty ---
 export const populateDefaultData = () => {
-    const users = getUsers();
-    const products = getProducts();
-    const orders = getOrders();
+    if (localStorage.getItem(STORAGE_KEYS.INITIALIZED)) return;
+    let users = getUsers();
+    let products = getProducts();
+    let orders = getOrders();
 
     if (users.length === 0) {
         const defaultUsers = [
@@ -95,6 +96,7 @@ export const populateDefaultData = () => {
             { id: 'caterer-2', username: 'caterer2', password: 'password', role: 'caterer' },
         ];
         saveUsers(defaultUsers);
+        users = defaultUsers;
         console.log("Default users added to localStorage.");
     }
 
@@ -106,7 +108,7 @@ export const populateDefaultData = () => {
         const defaultProducts = [
             {
                 id: 'prod-1',
-                catererId: caterer1 ? caterer1.id : 'caterer-1', // Use found ID or fallback
+                catererId: caterer1?.id || 'caterer-1', // Use found ID or fallback
                 name: 'Traditional Indian Thali',
                 description: 'A complete meal with rice, roti, dal, vegetables, and dessert.',
                 price: 250,
@@ -114,7 +116,7 @@ export const populateDefaultData = () => {
             },
             {
                 id: 'prod-2',
-                catererId: caterer1 ? caterer1.id : 'caterer-1',
+                catererId: caterer1?.id || 'caterer-1',
                 name: 'Biryani Feast',
                 description: 'Fragrant basmati rice cooked with spices and your choice of meat or vegetables.',
                 price: 350,
@@ -122,7 +124,7 @@ export const populateDefaultData = () => {
             },
              {
                 id: 'prod-3',
-                catererId: caterer2 ? caterer2.id : 'caterer-2',
+                catererId: caterer2?.id || 'caterer-2',
                 name: 'South Indian Breakfast Combo',
                 description: 'Idli, Vada, Dosa with Sambar and Chutneys.',
                 price: 180,
@@ -130,7 +132,7 @@ export const populateDefaultData = () => {
             },
              {
                 id: 'prod-4',
-                catererId: caterer2 ? caterer2.id : 'caterer-2',
+                catererId: caterer2?.id || 'caterer-2',
                 name: 'Gujarati Thali',
                 description: 'Sweet and savory Gujarati dishes.',
                 price: 280,
@@ -151,3 +153,5 @@ export const populateDefaultData = () => {
         // console.log("Default orders added to localStorage.");
     }
 };
+
+
