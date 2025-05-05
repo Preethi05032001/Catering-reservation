@@ -39,6 +39,8 @@ export const saveUsers = (users) => saveToLocalStorage(STORAGE_KEYS.USERS, users
 
 export const getProducts = () => getFromLocalStorage(STORAGE_KEYS.PRODUCTS, []);
 export const saveProducts = (products) => saveToLocalStorage(STORAGE_KEYS.PRODUCTS, products);
+console.log("📦 Saved Products:", defaultProducts);
+console.log("📦 In localStorage:", localStorage.getItem("cateringProducts"));
 
 export const getOrders = () => getFromLocalStorage(STORAGE_KEYS.ORDERS, []);
 export const saveOrders = (orders) => saveToLocalStorage(STORAGE_KEYS.ORDERS, orders);
@@ -120,6 +122,8 @@ export const populateDefaultData = () => {
             },
         ];
         saveProducts(defaultProducts);
+        console.log("📦 Saved Products:", defaultProducts);
+    console.log("📦 In localStorage:", localStorage.getItem("cateringProducts"));
         console.log("✅ Default products initialized.");
     }
 
