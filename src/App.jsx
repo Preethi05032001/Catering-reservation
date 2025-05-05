@@ -37,9 +37,7 @@ const ThemeApplier = ({ children }) => {
 function App() {
   // Populate default data when the app starts if localStorage is empty
   useEffect(() => {
-    window.addEventListener("load", () => {
-      populateDefaultData();
-    });
+    populateDefaultData();
   }, []);
 
   return (
