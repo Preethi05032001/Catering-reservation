@@ -26,7 +26,7 @@ function ProductList() {
     <div className="product-list-container">
       <h2 className="product-list-title">Available Catering Options</h2>
       <div className="product-grid">
-        {products.map(product => (
+        {products?.map(product => (
           <div key={product.id} className="product-card">
             <img src={product.imageUrl} alt={product.name} className="product-image" />
             <div className="product-info">
